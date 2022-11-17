@@ -6,7 +6,7 @@
 /*   By: mel-kouc <mel-kouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 11:38:53 by mel-kouc          #+#    #+#             */
-/*   Updated: 2022/11/15 16:57:25 by mel-kouc         ###   ########.fr       */
+/*   Updated: 2022/11/17 23:02:06 by mel-kouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_printf(const char *str, ...)
 
 	i = 0;
 	lenprint = 0;
+	if (write(1, NULL, 0))
+		return (-1);
 	va_start (args, str);
 	while (str[i])
 	{
